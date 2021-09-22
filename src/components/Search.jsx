@@ -25,6 +25,7 @@ class Search extends React.Component {
   render() {
     return (
       <div className="input-field">
+        <div className="input__container">
         <input
           className="validate"
           placeholder="search"
@@ -34,6 +35,13 @@ class Search extends React.Component {
           onChange={(evtent) => this.setState({ search: evtent.target.value })}
           onKeyDown={this.handleKey}
         />
+        <button
+          className="btn input__btn purple darken-4"
+          onClick={() => this.props.searchMovies(this.state.search)}
+        >
+          Search
+        </button>
+        </div>
         <div>
           <label style={{ marginRight: "2rem" }}>
             <input
@@ -70,12 +78,7 @@ class Search extends React.Component {
           </label>
         </div>
 
-        <button
-          className="btn"
-          onClick={() => this.props.searchMovies(this.state.search)}
-        >
-          Search
-        </button>
+
       </div>
     );
   }
