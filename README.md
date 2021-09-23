@@ -1,5 +1,5 @@
 # React Movies
-Movie app represent basic work with omdbapi.com API. 
+Movie app represent basic work with omdbapi.com API. <br>
 Created with Materialize.
 
 Link: https://glebov-evgeny.github.io/movies/
