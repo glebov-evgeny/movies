@@ -3,7 +3,7 @@ function Footer() {
         <footer className="page-footer purple darken-4">            
             <div className="footer-copyright">
                 <div className="container">
-                    © {new Date().getFullYear()}
+                    © {new Date().getFullYear()} 
                 </div>
             </div>
         </footer>
