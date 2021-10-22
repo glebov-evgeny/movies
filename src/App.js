@@ -1,14 +1,28 @@
-import { Footer } from "./layout/Footer";
-import { Header } from "./layout/Header";
-import { Main } from "./layout/Main";
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+import { Home } from "./pages/Home";
+import { About } from "./pages/About";
+import { Category } from "./pages/Category";
+import { Contacts } from "./pages/Contacts";
+import { NotFound } from "./pages/NotFound";
 
 function App() {
   return (
     <>
-      <Header/>
-        <Main/>
-      <Footer/>
+    <Router>
+      <Header />
+      <main className="container content">        
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/contacts" component={Contacts} />
+            <Route path="/category/:name" component={Category} />
+            <Route component={NotFound} />
+          </Switch>        
+      </main>
+      <Footer />
+      </Router>
     </>
   );
 }

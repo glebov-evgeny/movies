@@ -1,0 +1,4 @@
+function Contacts(){
+    return <h2>Contacts</h2>
+}
+export { Contacts }
