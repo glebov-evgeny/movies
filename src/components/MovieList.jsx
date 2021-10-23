@@ -8,7 +8,7 @@ function MovieList(props){
                 movies.map(movie => (
                     <Movie key={movie.imdbID} {...movie}/>
                 )) : (
-                    <h4>Ничего не найдено</h4>
+                    <h4>Ничего не найдено...</h4>
                 )
             }
         </div>
